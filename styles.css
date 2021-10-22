@@ -25,6 +25,25 @@ button {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
+h1 {
+	font-size: 2rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.25rem;
+}
+h4 {
+	font-size: 1rem;
+}
+p {
+	color: var(--BLACK);
+}
+span {
+	font-size: 0.9rem;
+	color: var(--DARK-GREY);
+}
 
 /* COLORS */
 :root {
@@ -159,6 +178,10 @@ section {
     max-width: 1200px;
 }
 
+section > h2 {
+	margin-bottom: 15px;
+}
+
 header {
     width: 80vw;
     max-width: 1200px;
@@ -258,6 +281,14 @@ section.inputs > div > div.input-radio > div {
 	height: 42px;
 }
 
+section.texts > div {
+	display: flex;
+	justify-content: space-between;
+}
+section.texts > div > div {
+	width: 50%;
+}
+
 @media screen and (max-width: 1024px) {
 	header {
 		flex-direction: column-reverse;
@@ -276,10 +307,6 @@ section.inputs > div > div.input-radio > div {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-	
-	h2{
-		margin-bottom: 25px;
 	}
 
 	section > div {
