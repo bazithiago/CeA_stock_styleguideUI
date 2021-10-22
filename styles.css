@@ -111,6 +111,39 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: VAR(--EMERALD-LIGHTER);
 }
 
+/* INPUTS */
+input, select {
+	background: var(--SNOW-LIGHT);
+    border: 1px solid var(--SNOW);
+    border-radius: 4px;
+	font-size: 0.9rem;
+	height: 42px;
+	color: var(--BLACK);
+	padding: 0 24px;
+	min-width: 200px;
+}
+input:focus {
+	border: 1px solid var(--DOVE-GREY); 
+}
+input::placeholder{
+	color: var(--DOVE-GREY);
+}
+input:focus::placeholder{
+	color: transparent;
+}
+.label-text {
+	font-family: 'Poppins', sans-serif;
+	color: var(--BLACK);
+	font-weight: 700;
+}
+.label-radio::before{
+	background: var(--EMERALD);
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    width: 10px;
+	display: block;
+}
 
 
 
@@ -196,16 +229,33 @@ div.color > p {
 	color: var(--WHITE);
 }
 
+section {
+	margin: 15px 0 50px 0;
+}
 section > div {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin: 15px 0 50px 0;
 }
 
 section > div > a {
 	margin: 0 25px 0 0;
+}
+
+section.inputs > div > div.input-with-label {
+	display: flex;
+	flex-direction: column;
+	margin: 0 20px 0 0;
+}
+section.inputs > div > div.input-radio {
+	display: flex;
+	flex-direction: column;
+}
+section.inputs > div > div.input-radio > div {
+	display: flex;
+	align-items: center;
+	height: 42px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -227,6 +277,11 @@ section > div > a {
 		flex-direction: column;
 		align-items: center;
 	}
+	
+	h2{
+		margin-bottom: 25px;
+	}
+
 	section > div {
 		display: flex;
 		justify-content: center;
@@ -235,5 +290,14 @@ section > div > a {
 	section.buttons > div > a {
 		margin: 10px 15px 10px 0;
 	}
+
+	section.inputs > div {
+		flex-direction: column;
+		justify-content: center;
+	}
+	section.inputs > div > div.input-with-label {
+		margin: 0 0 20px 0;
+	}
+
 
 }
