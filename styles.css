@@ -7,7 +7,7 @@
 	border: 0;
 	outline: 0;
 	box-sizing: border-box;
-    font-size: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -21,14 +21,100 @@ button {
 }
 /* RESET END */
 
-/* TITULOS */
+/* FONT-FAMILY */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
+}
+
+/* COLORS */
+:root {
+    --BACKGROUND: linear-gradient(to right, #052144, #0f3d6c);
+    --CEA: #104170;
+    --CEA-LIGHT: #165b9d;
+    --CEA-LIGHTER: #1c73c6;
+    --DARK-BLUE: #0c3661;
+    --DARK-BLUE-MEDIUM: #142a4d;
+    --DARK-BLUE-DARK: #041d3e;
+    --SOFT-BLUE: #0bacd3;
+    --EMERALD: #1eceac;
+    --EMERALD-MEDIUM: #03c998;
+    --EMERALD-LIGHT: #21dfba;
+    --EMERALD-LIGHTER: #54e6ca;
+    --EMERALD-DARK: #03b085;
+    --ORANGE: #ff5630;
+    --ORANGE-LIGHT: #ff6b4a;
+    --ORANGE-LIGHTER: #ff8064;
+    --YELLOW: #fed654;
+    --BLACK: #212b36;
+    --BLACK-LIGHT: #5f6872;
+    --BLACK-LIGHTER: #a6adb5;
+    --DARK-GREY: #434e58;
+    --DOVE-GREY: #666;
+    --GREY: #e2e7f0;
+    --GREY-CYAN: #d2e9ff;
+    --LIGHT-GREY: #ddd;
+    --SMOKE: #bbc7dc;
+    --SMOKE-LIGHT: #d5dce9;
+    --SMOKE-LIGHTER: #eff2f7;
+    --SNOW: #dfe4ef;
+    --WHITE: #fff;
+    --SNOW-LIGHT: #eceff5;
+    --SNOW-LIGHTER: #f9fafc;
+    --SILVER: #bdbdbd;
+    --CONCRETE: #f2f2f2;
+    --INFO-TEXT: #104170;
+    --SUCCESS-TEXT: #087621;
+    --DANGER-TEXT: #a00211;
+    --DANGER: #c12137;
+}
+
+
+/* BUTTONS */
+.btn {
+	border: none;
+    border-radius: 24px;
+    height: 48px;
+    padding: 0 30px;
+    width: auto;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn.primary {
+	background-color: var(--BLACK);
+	color: var(--WHITE);
+}
+.btn.primary:hover {
+    box-shadow: 2px 2px 8px 0 #5f6872;
+    transition: all .5s;
+}
+.btn.secondary {
+	background-color: transparent;
+	color: var(--CEA);
+	border: 1px solid var(--SMOKE);
+}
+.btn.secondary:hover {
+	box-shadow: 0 4px 4px 0 var(--SMOKE-LIGHTER);
+    transition: all .5s;
+	background-color: var(--SMOKE);
+}
+.btn.CTA {
+	background-color: var(--EMERALD);
+	color: var(--WHITE);
+}
+.btn.CTA:hover {
+	box-shadow: 0 4px 4px 0 #96f0df;
+    transition: all .5s;
+	background-color: VAR(--EMERALD-LIGHTER);
 }
 
 
 
 
+/* CONSTRUCTOR */
 main {
 	display: flex;
 	flex-direction: column;
@@ -47,7 +133,79 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+	margin: 0 0 60px 0;
 
+}
+
+div.color {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin: 0 25px 25px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.color.black {
+	background-color: var(--BLACK);
+}
+div.color.black:hover {
+	background-color: var(--BLACK-LIGHT);
+}
+div.color.blueCeA {
+	background-color: var(--CEA);
+}
+div.color.blueCeA:hover {
+	background-color: var(--CEA-LIGHTER);
+}
+div.color.links {
+	background-color: var(--CEA-LIGHTER);
+}
+div.color.links:hover {
+	background-color: var(--CEA-LIGHT);
+}
+div.color.softBlue {
+	background-color: var(--SOFT-BLUE);
+}
+div.color.softBlue:hover {
+	background-color: var(--CEA-LIGHTER);
+}
+div.color.emerald {
+	background-color: var(--EMERALD);
+}
+div.color.emerald:hover {
+	background-color: var(--EMERALD-LIGHT);
+}
+div.color.danger {
+	background-color: var(--DANGER);
+}
+div.color.danger:hover {
+	background-color: var(--DANGER-TEXT);
+}
+div.color.attention {
+	background-color: var(--ORANGE);
+}
+div.color.attention:hover {
+	background-color: var(--ORANGE-LIGHT);
+}
+
+div.color > p {
+	text-align: center;
+	font-size: 1.2rem;
+	color: var(--WHITE);
+}
+
+section > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 15px 0 50px 0;
+}
+
+section > div > a {
+	margin: 0 25px 0 0;
 }
 
 @media screen and (max-width: 1024px) {
